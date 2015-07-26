@@ -1,4 +1,5 @@
 FROM library/ubuntu-debootstrap
+MAINTAINER Marco Tanzi <tanzi.marco@gmail.com>
 
 ADD rootfs/etc /etc/
 ADD rootfs/root /root/
