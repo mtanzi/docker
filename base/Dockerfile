@@ -7,11 +7,16 @@ RUN whoami && chmod 0440 /etc/sudoers
 
 WORKDIR /root
 USER root
+
 ENV HOME /root
+ENV DEBIAN_FRONTEND noninteractive
 ENV LANG en_US.UTF-8
 ENV LANGUAGE en_US:en
 ENV LOGNAME root
 ENV TERM xterm
+
+RUN locale-gen en_US.UTF-8 \
+    && dpkg-reconfigure locales
 
 RUN apt-get update
 
