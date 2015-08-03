@@ -1,5 +1,8 @@
 FROM mtanzi/ruby:1.9.3-p547
 
+RUN apt-get update
+RUN apt-get install freetype* fontconfig
+
 # Phantomjs
 RUN mkdir /tmp/phantomjs \
     && cd /tmp/phantomjs \
